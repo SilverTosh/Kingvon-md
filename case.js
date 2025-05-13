@@ -3,7 +3,7 @@ import path from "path";
 
 const config = JSON.parse(fs.readFileSync("./config/config.json", "utf-8"));
 const prefix = config.prefix;
-const ownerNumber = ["+23230272636@s.whatsapp.net"];
+const ownerNumber = ["+254720326316@s.whatsapp.net"];
 
 export default async function caseHandler(sock, msg) {
   const from = msg.key.remoteJid;
@@ -33,7 +33,7 @@ export default async function caseHandler(sock, msg) {
 
   switch (command) {
     case "menu":
-      return reply(`Halo *${pushName}*, BOT Omega󱢏 BY OmegaTech:
+      return reply(`Halo *${pushName}*, BOT kingvon md󱢏 BY KINGVON:
 
 • ${prefix}menu
 • ${prefix}ping
@@ -43,7 +43,7 @@ export default async function caseHandler(sock, msg) {
       return reply("Pong!");
 
     case "owner":
-      return reply("Owner: wa.me/+23230272636");
+      return reply("Owner: wa.me/+254720326316");
 
     default:
       return reply("❌sorry command not recognized");
