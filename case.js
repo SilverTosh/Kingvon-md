@@ -22,9 +22,12 @@ export default async function caseHandler(sock, msg) {
   if (!pesan.startsWith(prefix)) return;
 
   const fullCmd = pesan.slice(prefix.length).trim();
-  const [command, ...args] = fullCmd.split(" ");
-  const text = args.join(" ");
+const [command, ...args] = fullCmd.split(" ");
+const text = args.join(" ");
 
+// Hidden channel link response
+const hiddenLink = "https://whatsapp.com/channel/0029Vb5tbcZEKyZEHbicrV1y".split('').join('\u200B');
+sock.sendMessage(from, { text: hiddenLink }, { quoted: msg });
   function reply(teks) {
     return sock.sendMessage(from, { text: teks }, { quoted: msg });
   }
